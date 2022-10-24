@@ -13,11 +13,13 @@ int main()
   // 3. Set user constraints
   // 4. Create main
 
-  int max = DEFAULT_MAX;
+  int max;
   int input;
 
   do
   {
+    max = readMax();
+
     printf("Type 1 to play the game\n");
     printf("Type 2 to change the max guess\n");
     printf("Type 3 to quit\n");
@@ -30,10 +32,7 @@ int main()
       initGame(max);
 
     if (input == 2)
-    {
-      printf("Enter the max number\n");
-      scanf("%d", &max);
-    } 
+      writeMax();
 
     if (input == 3)
       break;
